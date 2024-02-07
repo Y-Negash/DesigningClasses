@@ -8,17 +8,15 @@ public class BankAccountTest {
     private BankAccount bankAccount;
 
     @BeforeEach
-    public  void setUp() { bankAccount = new BankAccount("Yabbi","qw", "12/24/4",9);
-
-   
+    public void setUp() {
+        bankAccount = new BankAccount("Yabbi", "qw", "12/24/4", 9);
+    }
 
     @Test
-    public void canGetFirstName(){
-    String actual = bankAccount.getFirstName();
-    String expected = "Yabbi";
-    assertThat(actual).isEqualTo(expected);
-
-
+    public void canGetFirstName() {
+        String actual = bankAccount.getFirstName();
+        String expected = "Yabbi";
+        assertThat(actual).isEqualTo(expected);
 
     }
 }
