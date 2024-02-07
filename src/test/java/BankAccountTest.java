@@ -11,19 +11,25 @@ public class BankAccountTest {
     public void setUp() {
         bankAccount = new BankAccount("John", "Doe", "01/01/01", 456);
     }
-    
-    @Test // first getter test
+
+    @Test // first name getter test
     public void canGetFirstName() {
         String actual = bankAccount.getFirstName();
         String expected = "John";
         assertThat(actual).isEqualTo(expected);
     }
-    @Test // first setter test
+
+    @Test // first name setter test
     public void canSetFirstName() {
        bankAccount.setFirstName("John");
        String actual = bankAccount.getFirstName();
         assertThat(actual).isEqualTo("John");
     }
-
+    @Test // last name getter test
+    public void canGetLastName() {
+        String actual = bankAccount.getLastName();
+        String expected = "Doe";
+        assertThat(actual).isEqualTo(expected);
+    }
 
 }
