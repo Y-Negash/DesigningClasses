@@ -4,6 +4,7 @@ public class BankAccount {
     private String dateOfBirth;
     private int accountNumber;
     private double balance;
+    private double overdraft;
 
 //    Constructor
 public BankAccount(String firstName, String lastName, String dateOfBirth, int accountNumber){
@@ -13,6 +14,7 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     this.dateOfBirth = dateOfBirth;
     this.accountNumber = accountNumber;
     this.balance = 0;
+    this.overdraft = -300;
 }
 // GETTERS AND SETTERS
 
@@ -62,10 +64,10 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     }
 // Withdrawal Method
     public void withdrawal(int withdrewValue){
-    if (this.balance >= -300) {
+    if (this.balance >= this.overdraft) {
         this.balance -= withdrewValue;
     }
-    if(this.balance < -300){
+    if(this.balance < this.overdraft){
         this.balance = 0;
     }
 }
