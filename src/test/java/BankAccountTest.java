@@ -82,9 +82,9 @@ public class BankAccountTest {
     }
     @Test // Withdrawal method test
     public void CanWithdrawalWork(){
-        bankAccount.withdrawal(600);
+        bankAccount.withdrawal(300);
         double actual = bankAccount.getBalance();
-        assertThat(actual).isEqualTo(-600);
+        assertThat(actual).isEqualTo(-300);
     }
     @Test // Interest method test
     public void CanInterestWork(){

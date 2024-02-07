@@ -62,8 +62,13 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     }
 // Withdrawal Method
     public void withdrawal(int withdrewValue){
-    this.balance -= withdrewValue;
+    if (this.balance >= -300) {
+        this.balance -= withdrewValue;
     }
+    if(this.balance < -300){
+        this.balance = 0;
+    }
+}
 // Interest Method
     public void interest(){
     this.balance = (this.balance * 1.02) ;
