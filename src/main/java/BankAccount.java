@@ -48,13 +48,17 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
         this.accountNumber = accountNumber;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
     public void setBalance(int balance) {
         this.balance = balance;
     }
-// Custom Method - interest (top up)
+
+// Deposit Method
+    public void deposit(int number){
+     balance += number;
+    }
 
 }
