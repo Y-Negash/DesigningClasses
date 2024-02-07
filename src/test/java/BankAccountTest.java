@@ -43,11 +43,25 @@ public class BankAccountTest {
         String expected = "01/01/01";
         assertThat(actual).isEqualTo(expected);
     }
-
     @Test // DOB setter test
     public void canSetDateOfBirth(){
         bankAccount.setDateOfBirth("01/01/01");
         String actual = bankAccount.getDateOfBirth();
         assertThat(actual).isEqualTo("01/01/01");
     }
+    @Test // account number getter test
+    public void canGetAccountNumber(){
+       int actual = bankAccount.getAccountNumber();
+       int expected = 456;
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    
+
+
+
+
+
+
+    //
 }

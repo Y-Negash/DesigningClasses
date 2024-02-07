@@ -55,5 +55,6 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     public void setBalance(int balance) {
         this.balance = balance;
     }
+// Custom Method - interest (top up)
 
 }
