@@ -74,14 +74,18 @@ public class BankAccountTest {
         int actual = 0;
         assertThat(actual).isEqualTo(0);
     }
-
     @Test // deposit method test
     public void CanDepositWork(){
         bankAccount.deposit(1000);
         int actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(1000);
     }
-
+    @Test // withdrawal method test
+    public void CanWithdrawalWork(){
+        bankAccount.withdrawal(600);
+        int actual = bankAccount.getBalance();
+        assertThat(actual).isEqualTo(-600);
+    }
 
     //
 }

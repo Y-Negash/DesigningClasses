@@ -58,7 +58,12 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
 
 // Deposit Method
     public void deposit(int number){
-     balance += number;
+     this.balance += number;
     }
+// Withdrawal Method
+    public void withdrawal(int number){
+    this.balance -= number;
+    }
+    
 
 }
