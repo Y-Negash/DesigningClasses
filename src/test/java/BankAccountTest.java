@@ -64,28 +64,36 @@ public class BankAccountTest {
     }
     @Test // balance getter test
     public void canGetBalance(){
-        int actual = bankAccount.getBalance();
-        int expected = 0;
+        double actual = bankAccount.getBalance();
+        double expected = 0;
         assertThat(actual).isEqualTo(expected);
     }
     @Test //  balance setter test
     public void  canSetBalance(){
         bankAccount.setBalance(0);
-        int actual = 0;
+        double actual = 0;
         assertThat(actual).isEqualTo(0);
     }
-    @Test // deposit method test
+    @Test // Deposit method test
     public void CanDepositWork(){
         bankAccount.deposit(1000);
-        int actual = bankAccount.getBalance();
+        double actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(1000);
     }
-    @Test // withdrawal method test
+    @Test // Withdrawal method test
     public void CanWithdrawalWork(){
         bankAccount.withdrawal(600);
-        int actual = bankAccount.getBalance();
+        double actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(-600);
     }
+    @Test // Interest method test
+    public void CanInterestWork(){
+        bankAccount.setBalance(1000);
+        bankAccount.interest();
+        double actual = bankAccount.getBalance();
+        assertThat(actual).isEqualTo(1020);
+    }
+
 
     //
 }

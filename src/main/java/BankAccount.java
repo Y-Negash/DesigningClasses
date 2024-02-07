@@ -3,7 +3,7 @@ public class BankAccount {
     private String lastName;
     private String dateOfBirth;
     private int accountNumber;
-    private int balance;
+    private double balance;
 
 //    Constructor
 public BankAccount(String firstName, String lastName, String dateOfBirth, int accountNumber){
@@ -48,7 +48,7 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
         this.accountNumber = accountNumber;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
@@ -57,13 +57,16 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     }
 
 // Deposit Method
-    public void deposit(int number){
-     this.balance += number;
+    public void deposit(int depositedValue){
+     this.balance += depositedValue;
     }
 // Withdrawal Method
-    public void withdrawal(int number){
-    this.balance -= number;
+    public void withdrawal(int withdrewValue){
+    this.balance -= withdrewValue;
     }
-    
+// Interest Method
+    public void interest(){
+    this.balance = (this.balance * 1.02) ;
+    }
 
 }
