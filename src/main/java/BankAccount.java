@@ -48,7 +48,7 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
         this.accountNumber = accountNumber;
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 

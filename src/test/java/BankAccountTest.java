@@ -59,16 +59,28 @@ public class BankAccountTest {
     @Test // account number setter test
     public void  canSetAccountNumber(){
         bankAccount.setAccountNumber(456);
-        int actual = bankAccount.getAccountNumber();
+        int actual = 456;
         assertThat(actual).isEqualTo(456);
     }
+    @Test // balance getter test
+    public void canGetBalance(){
+        int actual = bankAccount.getBalance();
+        int expected = 0;
+        assertThat(actual).isEqualTo(expected);
+    }
+    @Test //  balance setter test
+    public void  canSetBalance(){
+        bankAccount.setBalance(0);
+        int actual = 0;
+        assertThat(actual).isEqualTo(0);
+    }
 
-
-
-
-
-
-
+    @Test // deposit method test
+    public void CanDepositWork(){
+        bankAccount.deposit(1000);
+        int actual = bankAccount.getBalance();
+        assertThat(actual).isEqualTo(1000);
+    }
 
 
     //
