@@ -9,14 +9,21 @@ public class BankAccountTest {
 
     @BeforeEach
     public void setUp() {
-        bankAccount = new BankAccount("Yabbi", "qw", "12/24/4", 9);
+        bankAccount = new BankAccount("John", "Doe", "01/01/01", 456);
     }
-
-    @Test
+    
+    @Test // first getter test
     public void canGetFirstName() {
         String actual = bankAccount.getFirstName();
-        String expected = "Yabbi";
+        String expected = "John";
         assertThat(actual).isEqualTo(expected);
-
     }
+    @Test // first setter test
+    public void canSetFirstName() {
+       bankAccount.setFirstName("John");
+       String actual = bankAccount.getFirstName();
+        assertThat(actual).isEqualTo("John");
+    }
+
+
 }
