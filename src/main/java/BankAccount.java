@@ -2,16 +2,19 @@ public class BankAccount {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
+    private String accountType;
     private int accountNumber;
     private double balance;
     private double overdraft;
 
+
 //    Constructor
-public BankAccount(String firstName, String lastName, String dateOfBirth, int accountNumber){
+public BankAccount(String firstName, String lastName, String dateOfBirth,String accountType, int accountNumber){
 
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
+    this.accountType = accountType;
     this.accountNumber = accountNumber;
     this.balance = 0;
     this.overdraft = -300;
@@ -72,8 +75,13 @@ public BankAccount(String firstName, String lastName, String dateOfBirth, int ac
     }
 }
 // Interest Method
-    public void interest(){
-    this.balance = (this.balance * 1.02) ;
+    public void payInterest(){
+    if (this.accountType.equals("Current")){
+        this.balance = (this.balance * 1.02);
+    }
+    if (this.accountType.equals("Savings")){
+        this.balance = (this.balance * 1.04);
+        }
     }
 
 }

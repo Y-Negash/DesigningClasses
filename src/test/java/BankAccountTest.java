@@ -9,7 +9,7 @@ public class BankAccountTest {
 
     @BeforeEach
     public void setUp() {
-        bankAccount = new BankAccount("John", "Doe", "01/01/01", 456);
+        bankAccount = new BankAccount("John", "Doe", "01/01/01","Current", 456);
     }
 
     @Test // first name getter test
@@ -89,7 +89,7 @@ public class BankAccountTest {
     @Test // Interest method test
     public void CanInterestWork(){
         bankAccount.setBalance(1000);
-        bankAccount.interest();
+        bankAccount.payInterest();
         double actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(1020);
     }
