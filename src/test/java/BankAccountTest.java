@@ -56,7 +56,14 @@ public class BankAccountTest {
         assertThat(actual).isEqualTo(expected);
     }
 
-    
+    @Test // account number setter test
+    public void  canSetAccountNumber(){
+        bankAccount.setAccountNumber(456);
+        int actual = bankAccount.getAccountNumber();
+        assertThat(actual).isEqualTo(456);
+    }
+
+
 
 
 
